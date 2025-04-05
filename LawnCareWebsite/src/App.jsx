@@ -1,5 +1,5 @@
 
-import Navbar from './components'
+import Navbar from './components/Navbar'
 import './App.css'
 
 
