@@ -3,43 +3,46 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 import avatar from '../assets/me.png'
 
-
+// TODO:: Change green to blue-600
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="absolute top-0 left-0 right-0 bg-white shadow-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Disclosure
+      as="nav"
+      className="absolute top-0 left-0 right-0 bg-white shadow-sm z-10"
+    >
+      <div className="mx-auto max-w-9xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex">
             <div className="flex shrink-0 items-center">
               <img
                 alt="Your Company"
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=green&shade=600"
                 className="h-8 w-auto"
               />
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
+              {/* Current: "border-green-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
               <a
                 href="#"
-                className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                className="inline-flex items-center border-b-2 border-green-500 px-1 pt-1 text-sm font-medium text-green-800"
               >
                 Dashboard
               </a>
               <a
                 href="#"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-green-800 hover:border-green-300 hover:text-green-500"
               >
                 Team
               </a>
               <a
                 href="#"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-green-800 hover:border-green-300 hover:text-green-500"
               >
                 Projects
               </a>
               <a
                 href="#"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-green-800 hover:border-green-300 hover:text-green-500"
               >
                 Calendar
               </a>
@@ -48,7 +51,7 @@ export default function Navbar() {
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
             <button
               type="button"
-              className="relative rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+              className="relative rounded-fuLL bg-white p-1 text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-hidden"
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
@@ -58,14 +61,10 @@ export default function Navbar() {
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
-                <MenuButton className="relative flex rounded-full bg-white text-sm focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden">
+                <MenuButton className="relative flex rounded-full bg-white text-sm focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-hidden">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
-                    alt=""
-                    src={avatar}
-                    className="size-7 rounded-full"
-                  />
+                  <img alt="" src={avatar} className="size-7 rounded-full" />
                 </MenuButton>
               </div>
               <MenuItems
@@ -101,11 +100,17 @@ export default function Navbar() {
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             {/* Mobile menu button */}
-            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500 focus:outline-hidden focus:ring-inset">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-green-500 focus:outline-hidden focus:ring-inset">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-open:block" />
+              <Bars3Icon
+                aria-hidden="true"
+                className="block size-6 group-data-open:hidden"
+              />
+              <XMarkIcon
+                aria-hidden="true"
+                className="hidden size-6 group-data-open:block"
+              />
             </DisclosureButton>
           </div>
         </div>
@@ -113,11 +118,11 @@ export default function Navbar() {
 
       <DisclosurePanel className="sm:hidden">
         <div className="space-y-1 pt-2 pb-3">
-          {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+          {/* Current: "bg-green-50 border-green-500 text-green-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
           <DisclosureButton
             as="a"
             href="#"
-            className="block border-l-4 border-indigo-500 bg-indigo-50 py-2 pr-4 pl-3 text-base font-medium text-indigo-700"
+            className="block border-l-4 border-green-500 bg-green-50 py-2 pr-4 pl-3 text-base font-medium text-green-700"
           >
             Dashboard
           </DisclosureButton>
@@ -146,19 +151,19 @@ export default function Navbar() {
         <div className="border-t border-gray-200 pt-4 pb-3">
           <div className="flex items-center px-4">
             <div className="shrink-0">
-              <img
-                alt=""
-                src={avatar}
-                className="size-10 rounded-full"
-              />
+              <img alt="" src={avatar} className="size-10 rounded-full" />
             </div>
             <div className="ml-3">
-              <div className="text-base font-medium text-gray-800">Marc Grupe</div>
-              <div className="text-sm font-medium text-gray-500">marc.grupe@gmail.com</div>
+              <div className="text-base font-medium text-gray-800">
+                Marc Grupe
+              </div>
+              <div className="text-sm font-medium text-gray-500">
+                marc.grupe@gmail.com
+              </div>
             </div>
             <button
               type="button"
-              className="relative ml-auto shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+              className="relative ml-auto shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:outline-hidden"
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
@@ -191,5 +196,5 @@ export default function Navbar() {
         </div>
       </DisclosurePanel>
     </Disclosure>
-  )
+  );
 }
